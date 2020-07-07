@@ -21,14 +21,6 @@ app.post('/student', async (req, res) => {
   }
 });
 
- console.log('accounts', accountDelete);
-
-    const totalAccountsFromBranch = await accountsModel.countDocuments({
-      conta: branch,
-    });
-
-    console.log(totalAccountsFromBranch);
-
 app.delete('/student/:id', async (req, res) => {
   try {
     const student = await studentModel.findOneAndDelete({ _id: req.params.id });
