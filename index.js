@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(studentRouter);
 
-app.listen(3000, () => {
+app.listen(3000 || 5000, () => {
   global.connection = connectDB();
   console.log('API Iniciada');
 });
