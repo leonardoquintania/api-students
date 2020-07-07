@@ -10,4 +10,5 @@ app.use(studentRouter);
 app.listen(3000 || 5000, () => {
   global.connection = connectDB();
   console.log('API Iniciada');
+  
 });
